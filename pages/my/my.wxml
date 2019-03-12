@@ -1,0 +1,108 @@
+<view class="{{up?'my-animimate':''}}">
+
+  <!-- 顶部Bg图 -->
+  <view class='UCenter-bg'>
+
+    <!-- 文本信息 -->
+    <view class='my-info'>
+      <!-- 头像 -->
+      <view class='my-avatar margin-left'>
+        <view class="cu-avatar xl round" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
+      </view>
+      <!-- 文字 -->
+      <view class='my-text margin-left'>
+        <text>Hi, 太阳星星月亮！</text>
+        <view></view>
+        <text>@ZhuChaoYang</text>
+      </view>
+    </view>
+
+    <!-- wave -->
+    <image src='https://image.weilanwl.com/gif/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+  </view>
+
+  <!-- 翘边阴影效果 -->
+  <view class="radius shadow-warp bg-white">
+
+    <view class="cu-list grid col-3 no-border">
+      <view class="cu-item" wx:for="{{iconList}}" wx:key>
+        <view class='icon-{{item.icon}} text-{{item.color}}'>
+          <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
+            <block wx:if="{{item.badge!=1}}">{{item.badge>99?'99+':item.badge}}</block>
+          </view>
+        </view>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 列表 -->
+  <view class="cu-list menu sm-border card-menu margin-top">
+    <view class="cu-item arrow">
+      <view class='content'>
+        <text class='icon-circlefill text-grey'></text>
+        <text class='text-grey'>个人中心</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class='content'>
+        <image src='/images/logo.png' class='png' mode='aspectFit'></image>
+        <text class='text-grey'>个人报告</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <button class='cu-btn content' open-type='contact'>
+        <text class='icon-btn text-olive'></text>
+        <text class='text-grey'>客服</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class='content' hover-class='none' url='../list/list' open-type="redirect">
+        <text class='icon-discoverfill text-orange'></text>
+        <text class='text-grey'>我会跳转</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <view class='content'>
+        <text class='icon-emojiflashfill text-pink'></text>
+        <text class='text-grey'>圈中好友</text>
+      </view>
+      <view class='action'>
+        <view class="cu-avatar-group">
+          <view class="cu-avatar round sm" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
+          <view class="cu-avatar round sm" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
+          <view class="cu-avatar round sm" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);"></view>
+          <view class="cu-avatar round sm" style="background-image:url(https://image.weilanwl.com/img/square-1.jpg);"></view>
+        </view>
+        <text class='text-grey text-sm'>4 人</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class='content'>
+        <text class='icon-btn text-green'></text>
+        <text class='text-grey'>按钮</text>
+      </view>
+      <view class='action'>
+        <button class='cu-btn round bg-mauve shadow'>
+          <text class='icon-upload'></text> 上传</button>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class='content'>
+        <text class='icon-tagfill text-red'></text>
+        <text class='text-grey'>标签</text>
+      </view>
+      <view class='action'>
+        <view class="cu-tag round bg-orange light">音乐</view>
+        <view class="cu-tag round bg-olive light">电影</view>
+        <view class="cu-tag round bg-blue light">旅行</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- bar -->
+  <import src='../mult/bar/bar.wxml' />
+  <template is='my-bar' data="{{pageIndex}}"></template>
+
+</view>

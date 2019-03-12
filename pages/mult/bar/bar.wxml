@@ -1,0 +1,20 @@
+<template name='my-bar'>
+  <view class="cu-bar tabbar margin-top-xl bg-white">
+    <view class="action {{pageIndex==1? 'text-mauve':'text-gray'}}" catchtap='goBar' data-item='home'>
+      <view class='icon-homefill'></view> 首页
+    </view>
+    <view class="action {{pageIndex==2? 'text-mauve':'text-gray'}}" catchtap='goBar' data-item='cata'>
+      <view class='icon-similar'></view> 分类
+    </view>
+    <view class="action {{pageIndex==3? 'text-mauve':'text-gray'}} add-action" catchtap='goBar' data-item='release'>
+      <button class='cu-btn icon-add bg-mauve shadow'></button>
+      发布
+    </view>
+    <view class="action {{pageIndex==4? 'text-mauve':'text-gray'}}" catchtap='goBar' data-item='cart'>
+      <view class='icon-cart'></view>购物车
+    </view>
+    <view class="action text-mauve {{pageIndex==5? 'text-mauve':'text-gray'}}" catchtap='goBar' data-item='my'>
+      <view class='icon-my'></view>我的
+    </view>
+  </view>
+</template>

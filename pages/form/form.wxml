@@ -1,0 +1,55 @@
+<!-- 顶部海浪信息 -->
+<view class='my-bars'>
+  <view class='bg-gradual-pink my-bottom'></view>
+  <view class="cu-bar my-fixed bg-gradual-pink" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <text class='icon-back_android text-white margin-left' style="font-size:20px" catchtap='back'>Your Info.</text>
+  </view>
+  <image src='https://image.weilanwl.com/gif/wave.gif' mode='scaleToFill' class='gif-wave my-waves'></image>
+</view>
+
+<view class='my-title'>
+  请认真填写以下信息
+</view>
+
+<view class='my-form'>
+
+  <view class="flex justify-between ">
+    <view class='my-txt'>性别*</view>
+    <view>
+      <switch class='switch-sex' checked></switch>
+    </view>
+  </view>
+
+  <view class='margin-top-lg margin-bottom-xs my-txt'>邮件*</view>
+  <input type='text' class='my-input' placeholder='forexample@163.com'></input>
+
+  <view class='margin-top-lg margin-bottom-xs my-txt'>地址*</view>
+  <input type='text' class='my-input' placeholder='xxx省xxx市'></input>
+
+  <view class='margin-top-lg margin-bottom-xs  my-txt'>体重*</view>
+  <view class='my-input my-weight'>
+    <input type='digit' placeholder='130.5'></input>
+    <view class='my-right'>斤</view>
+  </view>
+
+  <view class='margin-top-lg margin-bottom-xs my-txt'>起始日期-结束日期*</view>
+  <view class="flex">
+    <view class='flex-sub margin-xs'>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChangeSt">
+        <view class="picker">
+          {{dateSt}}
+        </view>
+      </picker>
+    </view>
+    <view style='line-height:35px;'>-</view>
+    <view class='flex-sub margin-xs'>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChangeEn">
+        <view class="picker">
+          {{dateEn}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <button class='btn mys-btn margin-top-xl bg-gradual-pink cu-btn round shadow'>完 成</button>
+</view>

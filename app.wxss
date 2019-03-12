@@ -1,0 +1,18 @@
+/**app.wxss**/
+@import "icon.wxss";
+@import "colorui.wxss";
+
+/** 以下两个为所有Tab页面点击发布按钮的页面上移动画 */
+.my-animimate {
+  animation: pageAnimate 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes pageAnimate{
+  form{
+    transform: translate(0px, 0px);
+  }
+  to{
+    transform: translate(0px, -110vh);
+  }
+}

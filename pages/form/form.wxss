@@ -1,0 +1,83 @@
+page {
+  background: #fff;
+}
+
+.my-title {
+  width: 80%;
+  margin: 20px auto;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-top: 1px solid rgb(211, 211, 211);
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.my-form {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.my-input {
+  height: 35px;
+  line-height: 35px;
+  padding: 5px;
+  border: 1px solid #c7c7c7;
+}
+
+.mys-btn {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+
+picker {
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid #c7c7c7;
+}
+
+.my-bars {
+  width: 100%;
+  height: 240rpx;
+  position: relative;
+}
+
+.my-bottom {
+  height: 100%;
+}
+
+.gif-wave {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;
+  height: 100rpx;
+}
+
+.cu-bar.my-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1024;
+}
+
+.my-weight {
+  position: relative;
+}
+
+.my-right {
+  position: absolute;
+  right: 10px;
+  top:0px;
+}
+
+.my-weight input {
+  width: 60%;
+}
+
+.my-txt {
+  font-weight: bold;
+}

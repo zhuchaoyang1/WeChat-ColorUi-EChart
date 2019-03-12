@@ -1,0 +1,13 @@
+.user-avator{
+  background-image:url(https://image.weilanwl.com/img/square-1.jpg);
+}
+
+.myy-container{
+  width: 100%;
+  height: 260px;
+}
+
+ec-canvas {
+  width: 100%;
+  height: 260px;
+}

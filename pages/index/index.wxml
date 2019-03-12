@@ -1,0 +1,61 @@
+<view class="{{up?'my-animimate':''}}">
+
+  <view class="cu-custom" style="height:{{CustomBar}}px;">
+    <view class="cu-bar fixed bg-gradual-pink" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+      <button wx:if='{{showDefault}}' class="cu-avatar round user-avator" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+      </button>
+      <image wx:else class='cu-avatar round' src='{{wxAvatar}}'></image>
+    </view>
+  </view>
+
+
+  <swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <swiper-item wx:for="{{4}}" wx:key class="{{cardCur==index?'cur':''}}">
+      <view class='bg-img shadow-blur' style="background-image:url(https://image.weilanwl.com/img/4x3-{{index+1}}.jpg)"></view>
+    </swiper-item>
+  </swiper>
+
+  <view class="cu-list grid col-3 no-border">
+    <view class="cu-item" wx:for="{{iconList}}" wx:key>
+      <view class='icon-{{item.icon}} text-{{item.color}}'>
+      </view>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 文章卡片 -->
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class='action'>
+      <text class='icon-titles text-orange '></text> 文章类卡片
+    </view>
+  </view>
+  <view class="cu-card article">
+    <view wx:for="1" wx:key class="cu-item shadow">
+      <view class="title">这里有个戏精铲屎官，主子了解一下？</view>
+      <view class="content">
+        <image src="https://image.weilanwl.com/img/4x3-3.jpg" mode="aspectFill"></image>
+        <view class="desc">
+          <view class='text-content'> 这是一个伪铲屎官为了给自己的程序凑字数瞎几把乱写的一堆文字，了解一下就OK！ヾ(=･ω･=)o</view>
+          <view>
+            <view class='cu-tag bg-red light sm round'>假装有猫系列</view>
+            <view class='cu-tag bg-green light sm round'>戏精系列</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Echarts -->
+  <view class="cu-card article no-card">
+    <view class='myy-container cu-item shadow' style='margin-top:-30px;'>
+      <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
+  </view>
+
+
+  <!-- bar -->
+  <import src='../mult/bar/bar.wxml' />
+  <template is='my-bar' data="{{pageIndex}}"></template>
+
+  <!-- 配套 -->
+</view>
